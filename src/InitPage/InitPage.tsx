@@ -1,9 +1,8 @@
-import { Avatar, Button, Fade, Grid, Slide } from '@mui/material';
-import { render } from '@testing-library/react';
+import { Button, Fade, Grid, Slide } from '@mui/material';
 import { ArrowForward } from '@mui/icons-material';
-import React, { Component, Props, useCallback } from 'react';
+import { Component} from 'react';
 import '../config/config.css';
-import { Link, RouteProps, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion as m } from "framer-motion"
 export default class InitPage extends Component {
     state = {

@@ -1,10 +1,18 @@
 {
     "lb":{
         "currency": "£",
-        "values": {
-            "notes":[1000,500,200,100,50],
-            "bigCoins":[20,5,2],
-            "smallCoins":[10,1]
-        }
+        "values": [
+            {"1000":"note"},
+            {"500":"note"},
+            {"200":"note"},
+            {"100":"note"},
+            {"50":"note"},
+            {"20":"bigCoin"},
+            {"10":"smallCoin"},
+            {"5":"bigCoin"},
+            {"2":"bigCoin"},
+            {"1":"smallCoin"}
+        ],
+        "types":["note","bigCoin","smallCoin"]
     }
 }

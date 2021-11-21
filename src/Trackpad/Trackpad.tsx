@@ -1,10 +1,10 @@
-import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import { ArrowBack } from "@mui/icons-material";
 import { Box, Button, FormControl, Grid, Input, InputAdornment, InputLabel } from "@mui/material";
-import { display, flexbox } from "@mui/system";
 import React from "react";
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
-export default class Trackpad extends Component {
+export default class Trackpad extends Component<any, any> {
     state = {
         finalValue: 0,
         arrayValue: []
@@ -18,36 +18,41 @@ export default class Trackpad extends Component {
         for (let i = 1; i <= 9; i++) {
             buttons.push(<Button variant="outlined" className="inputButton" value={i} onClick={() => addValue(i)}><p>{i}</p></Button>)
         }
-        const updateValue = () =>{
+        const updateValue = () => {
             let newValue: any = this.state.arrayValue.join("");
             this.setState(
                 {
-                    finalValue : +newValue
+                    finalValue: +newValue
                 }
             )
         }
 
-        const addValue = (value:number) =>{
+        const addValue = (value: number) => {
             let newArray: any = this.state.arrayValue;
             newArray.push(value);
             this.setState(
                 {
-                    arrayValue : newArray
+                    arrayValue: newArray
                 }
             )
             updateValue();
         }
 
-        const removeValue = () =>{
+        const removeValue = () => {
             let newArray: any = this.state.arrayValue;
             newArray.pop();
             this.setState(
                 {
-                    arrayValue : newArray
+                    arrayValue: newArray
                 }
             )
             updateValue();
         }
+
+        const onTrigger = () => {
+            this.props.parentCallback(this.state.finalValue);
+        }
+
 
         function FormRow(_index: number) {
             return (
@@ -96,13 +101,18 @@ export default class Trackpad extends Component {
                                     <Grid item xs={1}>
                                         <Button variant="outlined" className="inputButton" value={0} onClick={() => addValue(0)}><p>0</p></Button>
                                     </Grid>
-                                    <Grid item xs={1}>
-
-                                    </Grid>
+                                    <Grid item xs={1}></Grid>
                                 </Grid>
                             </Grid>
                         </Box>
-                        <Button type="submit" variant="outlined" className="submitButton" ><p>submit</p></Button>
+                        {this.state.finalValue != 0 ? 
+                            <Link to="/results">
+                                <Button type="submit" variant="outlined" className="submitButton" onClick={() => onTrigger()}><p>submit</p></Button>
+                            </Link>
+                            :
+                            <Button type="submit" variant="outlined" className="submitButton" disabled={true}><p>submit</p></Button>
+                        }
+
                     </FormControl>
                 </Grid>
             </Grid>
