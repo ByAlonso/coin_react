@@ -1,7 +1,7 @@
 :root {
     --backgroundColor: #2bbed3;
     --white: white;
-    --smallText: 9vw;
+    --smallText: 4vw;
     --bigText: 10vw;
     --textColor: var(--white);
 }
@@ -19,7 +19,7 @@
 }
 
 .semiContainer{
-    display: flex;
+    display: flex !important;
     text-align: center;
     justify-content: center;
     margin: auto;
@@ -72,4 +72,46 @@
 
 .inputButton:hover{
     background-color: var(--white) !important;
+}
+
+.insideCenterContainer{
+    width: 50% !important;
+}
+
+.buttonRow{
+    place-content: space-evenly;
+}
+
+.trackpad{
+    padding-top: 3%;
+    width: 50%;
+    align-self: center;
+}
+
+.trackpadLabel > p{
+    color: var(--white);
+    font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif";
+    font-size: var(--smallText);
+    font-weight: bold;
+}
+
+.trackpadLabel{
+    overflow: unset !important;
+    position: unset !important;
+    transform-origin: top !important;
+}
+
+.inputAdornment > p{
+    color: var(--white);
+    font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif";
+    font-size: var(--smallText);
+    font-weight: bold;
+}
+
+.trackpadInput{
+    color: var(--white) !important;
+    font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif" !important;
+    font-size: var(--smallText) !important;
+    font-weight: bold !important;
+    align-self: center !important;
 }
