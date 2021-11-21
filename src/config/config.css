@@ -1,0 +1,75 @@
+:root {
+    --backgroundColor: #2bbed3;
+    --white: white;
+    --smallText: 9vw;
+    --bigText: 10vw;
+    --textColor: var(--white);
+}
+/*Font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif"
+*/
+
+.defaultContainer{
+    overflow: hidden;
+    background-color: var(--backgroundColor);
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.semiContainer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.introText {
+    display: block;
+    width: 100%;
+    font-size: var(--bigText);
+    color: var(--textColor);
+    font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif";
+    font-weight: bold;
+    text-align: center;
+    place-self: center;
+    margin: 30px;
+}
+
+.initButton{
+    display: block;
+    height:10vw;
+    width:10vw;
+    border: 3px solid var(--white) !important;
+    border-radius: 20px !important;
+}
+
+.initArrow{
+    color: var(--white);
+    height:7vw !important;
+    width:7vw !important;
+}
+
+.inputButton{
+    color: var(--white);
+    border: 2px solid var(--white) !important;
+    border-radius: 50% !important;
+    width: 20px;
+    height: 60px;  
+}
+
+.inputButton > p {
+    color: var(--white);
+    font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif";
+    font-weight: bold;
+    font-size: 2.5vw;
+}
+
+.inputButton:hover > p{
+    color: var(--backgroundColor);
+}
+
+.inputButton:hover{
+    background-color: var(--white) !important;
+}
