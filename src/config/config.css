@@ -7,19 +7,28 @@
 }
 /*Font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif"
 */
-
-.defaultContainer{
-    overflow: hidden;
+p{
+    color: var(--white);
+    font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif";
+    font-size: var(--smallText);
+    font-weight: bold;
+}
+html{
     background-color: var(--backgroundColor);
-    height: 100vh;
     display: flex;
     align-content: center;
     justify-content: center;
     margin: auto;
 }
+.defaultContainer{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 50%;
+}
 
 .semiContainer{
-    display: flex !important;
     text-align: center;
     justify-content: center;
     margin: auto;
@@ -65,20 +74,19 @@
 
 .inputButton > p,
 .submitButton > p {
-    color: var(--white);
-    font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif";
-    font-size: var(--smallText);
     text-transform: none;
 }
 
 .inputButton:hover > p,
 .submitButton:hover > p,
+.initButton:hover > .initArrow,
 .inputButton:hover > .backArrow{
     color: var(--backgroundColor);
 }
 
 .inputButton:hover,
-.submitButton:hover
+.submitButton:hover,
+.initButton:hover
 {
     background-color: var(--white) !important;
 }
@@ -99,24 +107,10 @@
     text-align: -webkit-center;
 }
 
-.trackpadLabel > p{
-    color: var(--white);
-    font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif";
-    font-size: var(--smallText);
-    font-weight: bold;
-}
-
 .trackpadLabel{
     overflow: unset !important;
     position: unset !important;
     transform-origin: top !important;
-}
-
-.inputAdornment > p{
-    color: var(--white);
-    font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif";
-    font-size: 3 * var(--smallText);
-    font-weight: bold;
 }
 
 .trackpadInput{
@@ -141,4 +135,16 @@
 .submitButton:disabled{
     opacity: 30%;
     border: 3px solid var(--white) !important;
+}
+
+.bigNumber{
+    font-size: var(--bigText);
+}
+
+.coinGrid{
+    justify-content: space-evenly !important;
+}
+.coinBox{
+    border: solid white 1px;
+    margin: 2%;
 }

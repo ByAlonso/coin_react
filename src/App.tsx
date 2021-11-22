@@ -21,7 +21,7 @@ class App extends Component {
 
   render() {
     return (
-      <Grid container className="defaultContainer">
+      <Grid container>
         <BrowserRouter>
           <Switch>
             <Route exact path="/">

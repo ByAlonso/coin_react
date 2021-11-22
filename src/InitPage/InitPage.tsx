@@ -12,7 +12,7 @@ export default class InitPage extends Component {
             this.setState({ in: true });
         }, 2000);
         return (
-            <Grid container className="semiContainer">
+            <Grid container className="defaultContainer">
                 <Fade in={true} timeout={2000} ><p className="introText">Enalyzer ATM</p></Fade >
                 <Slide in={this.state.in} direction={"up"} timeout={1500}>
                     <Link to="/trackpad">

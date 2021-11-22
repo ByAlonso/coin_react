@@ -121,7 +121,7 @@ export default class Trackpad extends Component<any, any> {
                             </Grid>
                         </Grid>
                     </Box>
-                    {this.state.finalValue != 0 ?
+                    {this.state.finalValue !== 0 ?
                         <Link to="/results" style={{ textDecoration: "none" }}>
                             <Button variant="outlined" className="submitButton" onClick={() => onTrigger()}>
                                 <p>Submit</p>
@@ -132,7 +132,6 @@ export default class Trackpad extends Component<any, any> {
                             <p>Submit</p>
                         </Button>
                     }
-
                 </FormControl>
             </Grid>
         )
