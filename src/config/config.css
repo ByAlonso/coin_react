@@ -1,8 +1,8 @@
 :root {
     --backgroundColor: #2bbed3;
     --white: white;
-    --smallText: 4vw;
-    --bigText: 10vw;
+    --smallText: 40px;
+    --bigText: 80px;
     --textColor: var(--white);
 }
 /*Font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif"
@@ -39,38 +39,47 @@
 
 .initButton{
     display: block;
-    height:10vw;
-    width:10vw;
+    height:var(--bigText);
+    width:var(--bigText);
     border: 3px solid var(--white) !important;
     border-radius: 20px !important;
 }
 
 .initArrow{
     color: var(--white);
-    height:7vw !important;
-    width:7vw !important;
+    height:7vmin !important;
+    width:7vmin !important;
+}
+
+.backArrow{
+    color: var(--white);
 }
 
 .inputButton{
     color: var(--white);
     border: 2px solid var(--white) !important;
     border-radius: 50% !important;
-    width: 20px;
+    width: 40px;
     height: 60px;  
 }
 
-.inputButton > p {
+.inputButton > p,
+.submitButton > p {
     color: var(--white);
     font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif";
-    font-weight: bold;
-    font-size: 2.5vw;
+    font-size: var(--smallText);
+    text-transform: none;
 }
 
-.inputButton:hover > p{
+.inputButton:hover > p,
+.submitButton:hover > p,
+.inputButton:hover > .backArrow{
     color: var(--backgroundColor);
 }
 
-.inputButton:hover{
+.inputButton:hover,
+.submitButton:hover
+{
     background-color: var(--white) !important;
 }
 
@@ -80,12 +89,14 @@
 
 .buttonRow{
     place-content: space-evenly;
+    padding: 1%;
 }
 
 .trackpad{
-    padding-top: 3%;
-    width: 50%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     align-self: center;
+    text-align: -webkit-center;
 }
 
 .trackpadLabel > p{
@@ -104,7 +115,7 @@
 .inputAdornment > p{
     color: var(--white);
     font-family: "Helvetica Neue","Helvetica","Arial","Sans-serif";
-    font-size: var(--smallText);
+    font-size: 3 * var(--smallText);
     font-weight: bold;
 }
 
@@ -114,4 +125,20 @@
     font-size: var(--smallText) !important;
     font-weight: bold !important;
     align-self: center !important;
+    padding-left: 20%;
+}
+
+.submitButton,
+.submitButton:disabled{
+    align-self: center;
+    color: var(--white) !important;
+    border: 3px solid var(--white) !important;
+    border-radius: 30% !important;
+    width: fit-content;
+    height: 70px;
+}
+
+.submitButton:disabled{
+    opacity: 30%;
+    border: 3px solid var(--white) !important;
 }
